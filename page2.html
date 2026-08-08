@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Memories ♡</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Dancing+Script:wght@500&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            height: 100vh;
+            overflow: hidden;
+
+            color: white;
+
+            background:
+
+                radial-gradient(circle at center,
+                    rgba(220, 100, 255, .35),
+                    transparent 40%),
+
+                linear-gradient(180deg,
+                    #03010a,
+                    #17052b,
+                    #05010b);
+
+            font-family: Georgia, serif;
+
+        }
+
+
+        /* stars */
+
+        .stars {
+
+            position: absolute;
+            inset: 0;
+
+            background-image:
+
+                radial-gradient(circle,
+                    white 0 1px,
+                    transparent 1.5px),
+
+                radial-gradient(circle,
+                    #f3b7ff 0 1px,
+                    transparent 1.5px);
+
+
+            background-size:
+
+                70px 70px,
+                120px 120px;
+
+
+            opacity: .7;
+
+            animation: move 15s linear infinite;
+
+        }
+
+
+        @keyframes move {
+
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-50px);
+            }
+
+        }
+
+
+        /* content */
+
+
+        .container {
+
+            height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .content {
+
+            animation: fade 1.5s ease;
+
+        }
+
+
+        @keyframes fade {
+
+            from {
+
+                opacity: 0;
+                transform: translateY(30px);
+
+            }
+
+            to {
+
+                opacity: 1;
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        .small {
+
+            font-family: "Dancing Script";
+
+            font-size: 45px;
+
+            color: #f1a6ff;
+
+        }
+
+
+        h1 {
+
+            font-family: "DM Serif Display";
+
+            font-size: 75px;
+
+            font-weight: 400;
+
+            text-shadow:
+
+                0 0 20px #d86cff;
+
+        }
+
+
+        h1 span {
+
+            color: #ff9de9;
+
+        }
+
+
+        .message {
+
+            margin-top: 20px;
+
+            font-size: 19px;
+
+            line-height: 1.7;
+
+            color: rgba(255, 255, 255, .85);
+
+        }
+
+
+        /* photos */
+
+
+        .photoBox {
+
+            margin-top: 35px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+        }
+
+
+        .photo {
+
+            width: 110px;
+
+            height: 140px;
+
+            background: white;
+
+            padding: 7px;
+
+            border-radius: 12px;
+
+            box-shadow:
+
+                0 0 25px rgba(255, 130, 240, .6);
+
+            transform: rotate(-5deg);
+
+            animation: float 3s infinite ease-in-out;
+
+        }
+
+
+        .photo:nth-child(2) {
+
+            transform: rotate(5deg);
+
+            animation-delay: .5s;
+
+        }
+
+
+        .photo:nth-child(3) {
+
+            transform: rotate(-3deg);
+
+            animation-delay: 1s;
+
+        }
+
+
+
+        .photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+        }
+
+
+
+        @keyframes float {
+
+            50% {
+
+                transform: translateY(-10px) rotate(0deg);
+
+            }
+
+        }
+
+
+        /* button */
+
+
+        .nextBtn {
+
+            margin-top: 35px;
+
+        }
+
+
+        .nextBtn a {
+
+            display: inline-block;
+
+            padding: 12px 35px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-size: 18px;
+
+            background:
+
+                rgba(255, 150, 230, .25);
+
+
+            border: 1px solid #ff9de9;
+
+
+            box-shadow:
+
+                0 0 20px rgba(255, 120, 230, .6);
+
+
+            transition: .3s;
+
+        }
+
+
+        .nextBtn a:hover {
+
+            background: #ff9de9;
+
+            color: #25052d;
+
+        }
+
+
+        /* bottom */
+
+
+        .bottom {
+
+            position: absolute;
+
+            bottom: 30px;
+
+            width: 100%;
+
+            text-align: center;
+
+            font-family: "Dancing Script";
+
+            font-size: 28px;
+
+            color: #f0a6e8;
+
+            z-index: 3;
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="stars"></div>
+
+
+    <div class="container">
+
+
+        <div class="content">
+
+
+            <div class="small">
+
+                Our Memories
+
+            </div>
+
+
+            <h1>
+
+                3 <span>Years</span>
+
+            </h1>
+
+
+            <div class="message">
+
+                Three years of love,<br>
+
+                little moments and endless memories. ♡
+
+            </div>
+
+
+
+            <div class="photoBox">
+
+
+                <div class="photo">
+
+                    <img src="photo1.jpeg">
+
+                </div>
+
+
+                <div class="photo">
+
+                    <img src="photo2.jpeg">
+
+                </div>
+
+
+                <div class="photo">
+
+                    <img src="photo3.jpeg">
+
+                </div>
+
+                <div class="photo">
+
+                    <img src="photo4.jpeg">
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="nextBtn">
+
+                <a href="page3.html">
+
+                    Continue ♡
+
+                </a>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <div class="bottom">
+
+        Forever & Always ♡
+
+    </div>
+
+
+</body>
+
+</html>

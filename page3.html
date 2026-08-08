@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forever ♡</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Dancing+Script:wght@500&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            height: 100vh;
+            overflow: hidden;
+
+            color: white;
+
+            background:
+
+                radial-gradient(circle,
+                    rgba(255, 120, 220, .35),
+                    transparent 40%),
+
+                linear-gradient(180deg,
+                    #03010a,
+                    #19062b,
+                    #05010b);
+
+            font-family: Georgia, serif;
+
+        }
+
+
+
+        /* stars */
+
+        .stars {
+
+            position: absolute;
+            inset: 0;
+
+            background-image:
+
+                radial-gradient(circle,
+                    white 0 1px,
+                    transparent 1.5px),
+
+                radial-gradient(circle,
+                    #ffc4f4 0 1px,
+                    transparent 1.5px);
+
+
+            background-size:
+
+                70px 70px,
+                120px 120px;
+
+
+            animation: move 15s linear infinite;
+
+            opacity: .7;
+
+        }
+
+
+        @keyframes move {
+
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-50px);
+            }
+
+        }
+
+
+
+        /* main */
+
+        .container {
+
+            height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+
+        .content {
+
+            animation: show 2s ease;
+
+        }
+
+
+
+        @keyframes show {
+
+            from {
+
+                opacity: 0;
+                transform: translateY(30px);
+
+            }
+
+            to {
+
+                opacity: 1;
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+
+        .small {
+
+            font-family: "Dancing Script";
+
+            font-size: 45px;
+
+            color: #ffb1ed;
+
+        }
+
+
+
+        h1 {
+
+            font-family: "DM Serif Display";
+
+            font-size: 70px;
+
+            font-weight: 400;
+
+            text-shadow:
+
+                0 0 20px #ff7de2;
+
+        }
+
+
+
+        h1 span {
+
+            color: #ff9de9;
+
+        }
+
+
+
+        .message {
+
+            margin: 20px;
+
+            font-size: 20px;
+
+            line-height: 1.8;
+
+            color: rgba(255, 255, 255, .9);
+
+        }
+
+
+
+        /* slideshow */
+
+        .slider {
+
+            width: 260px;
+
+            height: 300px;
+
+            margin: auto;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow:
+
+                0 0 30px rgba(255, 120, 230, .7);
+
+        }
+
+
+        .slider img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            animation: zoom 4s infinite;
+
+        }
+
+
+
+        @keyframes zoom {
+
+            50% {
+
+                transform: scale(1.08);
+
+            }
+
+        }
+
+
+
+        /* button */
+
+        button {
+
+            margin-top: 25px;
+
+            padding: 12px 35px;
+
+            border-radius: 30px;
+
+            border: 1px solid #ff9de9;
+
+            background: rgba(255, 150, 230, .25);
+
+            color: white;
+
+            font-size: 18px;
+
+            cursor: pointer;
+
+            box-shadow:
+
+                0 0 20px rgba(255, 120, 230, .6);
+
+        }
+
+
+
+        button:hover {
+
+            background: #ff9de9;
+
+            color: #25052d;
+
+        }
+
+
+
+        /* bottom */
+
+        .bottom {
+
+            position: absolute;
+
+            bottom: 30px;
+
+            width: 100%;
+
+            text-align: center;
+
+            font-family: "Dancing Script";
+
+            font-size: 30px;
+
+            color: #ffb1ed;
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="stars"></div>
+
+
+    <audio id="song" loop>
+
+        <source src="main_rang_sharbaton.mp3" type="audio/mp3">
+
+    </audio>
+
+
+
+    <div class="container">
+
+
+        <div class="content">
+
+
+            <div class="small">
+
+                Our Forever
+
+            </div>
+
+
+            <h1>
+
+                Always <span>You</span>
+
+            </h1>
+
+
+
+            <div class="slider">
+
+                <img id="memory" src="photo3.jpeg">
+
+            </div>
+
+
+
+            <div class="message">
+
+                Three years, countless memories,<br>
+
+                and a lifetime of moments waiting for us. ❤️
+
+                <br><br>
+
+                Thank you for being my favourite chapter. 🥹
+
+            </div>
+
+
+
+            <button onclick="playSong()">
+
+                🎵 Rang Sharbaton Ka.. ♡
+
+            </button>
+
+            <div class="nextBtn">
+
+                <a href="page4.html">
+
+                    Our Last Chapter ♡
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="bottom">
+
+        Forever & Always ♾️
+
+    </div>
+
+
+
+    <script>
+
+
+        let photos = [
+
+            "photo5.jpeg",
+
+            "photo6.jpeg",
+
+            "photo7.jpeg"
+
+        ];
+
+
+        let index = 0;
+
+
+        setInterval(() => {
+
+            index++;
+
+            if (index >= photos.length) {
+
+                index = 0;
+
+            }
+
+
+            document.getElementById("memory").src = photos[index];
+
+
+        }, 4000);
+
+
+
+        function playSong() {
+
+            document.getElementById("song").play();
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

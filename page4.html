@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Forever ♡</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Dancing+Script:wght@500&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            height: 100vh;
+            overflow: hidden;
+
+            color: white;
+
+            background:
+
+                radial-gradient(circle at center,
+                    rgba(255, 180, 230, .35),
+                    transparent 40%),
+
+                linear-gradient(180deg,
+                    #03010a,
+                    #22062f,
+                    #05010b);
+
+            font-family: Georgia, serif;
+
+        }
+
+
+        /* stars */
+
+        .stars {
+
+            position: absolute;
+            inset: 0;
+
+            background-image:
+
+                radial-gradient(circle,
+                    white 0 1px,
+                    transparent 1.5px);
+
+            background-size: 70px 70px;
+
+            opacity: .7;
+
+            animation: move 15s linear infinite;
+
+        }
+
+
+        @keyframes move {
+
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-50px);
+            }
+
+        }
+
+
+        /* hearts */
+
+        .heart {
+
+            position: absolute;
+
+            font-size: 25px;
+
+            color: #ff9de9;
+
+            animation: fall 8s linear infinite;
+
+        }
+
+
+        @keyframes fall {
+
+            from {
+
+                transform: translateY(-100px);
+
+                opacity: 1;
+
+            }
+
+            to {
+
+                transform: translateY(110vh);
+
+                opacity: 0;
+
+            }
+
+        }
+
+
+
+        /* content */
+
+
+        .container {
+
+            height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .content {
+
+            animation: show 2s ease;
+
+        }
+
+
+
+        @keyframes show {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(30px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+
+        .small {
+
+            font-family: "Dancing Script";
+
+            font-size: 45px;
+
+            color: #ffb1ed;
+
+        }
+
+
+
+        h1 {
+
+            font-family: "DM Serif Display";
+
+            font-size: 65px;
+
+            font-weight: 400;
+
+            text-shadow:
+
+                0 0 25px #ff7de2;
+
+        }
+
+
+        h1 span {
+
+            color: #ff9de9;
+
+        }
+
+
+
+        /* photo */
+
+
+        .photo {
+
+            width: 240px;
+
+            height: 260px;
+
+            margin: 25px auto;
+
+            padding: 8px;
+
+            background: white;
+
+            border-radius: 20px;
+
+            box-shadow:
+
+                0 0 35px rgba(255, 120, 230, .8);
+
+        }
+
+
+
+        .photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+        }
+
+
+
+        /* message */
+
+
+        .message {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: rgba(255, 255, 255, .9);
+
+        }
+
+
+
+        /* button */
+
+
+        .btn {
+
+            margin-top: 30px;
+
+        }
+
+
+        .btn a {
+
+            display: inline-block;
+
+            padding: 13px 35px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-size: 18px;
+
+            background: rgba(255, 150, 230, .25);
+
+            border: 1px solid #ff9de9;
+
+            box-shadow:
+
+                0 0 20px rgba(255, 120, 230, .6);
+
+        }
+
+
+
+        .btn a:hover {
+
+            background: #ff9de9;
+
+            color: #25052d;
+
+        }
+
+
+
+        /* bottom */
+
+
+        .bottom {
+
+            position: absolute;
+
+            bottom: 30px;
+
+            width: 100%;
+
+            text-align: center;
+
+            font-family: "Dancing Script";
+
+            font-size: 30px;
+
+            color: #ffb1ed;
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="stars"></div>
+
+
+    <div class="heart" style="left:10%;animation-delay:1s;">❤️</div>
+    <div class="heart" style="left:30%;animation-delay:3s;">♡</div>
+    <div class="heart" style="left:70%;animation-delay:2s;">❤️</div>
+    <div class="heart" style="left:85%;animation-delay:5s;">♡</div>
+
+
+
+    <div class="container">
+
+
+        <div class="content">
+
+
+            <div class="small">
+
+                Our Forever Story
+
+            </div>
+
+
+            <h1>
+
+                Always <span>You</span>
+
+            </h1>
+
+
+
+            <div class="photo">
+
+                <img src="photo2.jpeg">
+
+            </div>
+
+
+
+            <div class="message">
+
+                Three years, countless memories,<br>
+
+                and a lifetime waiting for us. ❤️
+
+                <br><br>
+
+                Thank you for being my favourite person,<br>
+
+                my happiness and my home. 🥹
+
+                <br><br>
+
+                Forever starts with you ♾️
+
+            </div>
+
+
+
+            <div class="btn">
+
+                <a href="page1.html">
+
+                    Replay Our Story ♡
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <div class="bottom">
+
+        Made with love ❤️
+
+    </div>
+
+
+
+</body>
+
+</html>
